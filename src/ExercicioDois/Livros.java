@@ -30,7 +30,6 @@ public class Livros {
     this.isbn = isbn;
   }
 
-  // Getters e Setters
   public String getNome() {
     return nome;
   }
@@ -63,38 +62,38 @@ public class Livros {
     this.autor = autor;
   }
 
-  // Métodos
   public int registrarLivro(int isbn){
-    setIsbn(isbn);
-    System.out.println("O livro foi registrado com o ISBN " + getIsbn());
-    return getIsbn();
+    //ToDo trotar gets e sets por this
+    this.isbn = isbn;
+    System.out.println("O livro foi registrado com o ISBN " +this.isbn);
+    return this.isbn;
   }
 
   public void registrarLivro(Integer isbn, String nome ){
-    setIsbn(isbn);
-    setNome(nome);
-    System.out.println("O livro foi registrado com o ISBN " + getIsbn() + " e o nome " + getNome());
+    this.isbn = isbn;
+    this.nome = nome;
+    System.out.println("O livro foi registrado com o ISBN " + this.isbn + " e o nome " + this.nome);
   }
 
   public void registrarLivro(Integer isbn, String nome, String genero){
-    setIsbn(isbn);
-    setNome(nome);
-    setGenero(genero);
-    System.out.println("O livro foi registrado com o ISBN " + getIsbn() + ", o nome " + getNome() + " e o " +
-        "gênero " + getGenero());
+    this.isbn = isbn;
+    this.nome = nome;
+    this.genero = genero;
+    System.out.println("O livro foi registrado com o ISBN " + this.isbn + ", o nome " + this.nome + " e o " +
+        "gênero " + this.genero);
   }
 
   public void registrarLivro(Integer isbn, String nome, String genero, String autor) {
-    setIsbn(isbn);
-    setNome(nome);
-    setGenero(genero);
-    setAutor(autor);
+    this.isbn = isbn;
+    this.nome = nome;
+    this.genero = genero;
+    this.autor = autor;
     System.out.println("O livro foi registrado com todos os atributos.");
   }
 
   public String toString() {
-      return "\nISBN: " + getIsbn() + " - Nome: " + getNome() + " - Gênero: " + getGenero() +
-          " - Autor: " + getAutor();
+      return "\nISBN: " + this.isbn + " - Nome: " + this.nome + " - Gênero: " + this.genero +
+          " - Autor: " + this.autor;
   }
 
 }

@@ -44,11 +44,9 @@ public class Funcionario {
 
   public void setDataAdmissao(String dataAdmissao) {
     LocalDate data = LocalDate.parse(dataAdmissao, DateTimeFormatter.ofPattern("dd/MM/yyyy"));
-    if(data.isAfter(LocalDate.now()) == true){
-      if(dataAdmissao == null){
-        System.out.println("A data de admissão não pode ser superior a data atual!!");
-      }
-    } else {
+    if(data.isAfter(LocalDate.now())){
+      System.out.println("A data de admissão não pode ser superior a data atual.");
+    } else{
       this.dataAdmissao = dataAdmissao;
     }
   }
